@@ -6,11 +6,11 @@ const app = express();
 const port = 3000;
 
 const pool = new Pool({
-  user: 'your-db-user',
-  host: 'your-db-host',
-  database: 'your-db-name',
-  password: 'your-db-password',
-  port: 5432, // default PostgreSQL port
+  user: 'yash',
+  host: 'localhost',
+  database: 'log',
+  password: 'Yash@123',
+  port: 5432, 
 });
 
 // Buffer to store logs before flushing to the database
