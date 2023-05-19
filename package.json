@@ -1,0 +1,19 @@
+{
+  "name": "loggenerator",
+  "version": "1.0.0",
+  "description": "log generator and store it in postgresql also added dpcker file for deployments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yash1539/logGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yash1539/logGenerator/issues"
+  },
+  "homepage": "https://github.com/yash1539/logGenerator#readme"
+}

@@ -1,0 +1,26 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: your-db-user
+      POSTGRES_PASSWORD: your-db-password
+      POSTGRES_DB: your-db-name
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  log-routing-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - database
+
+  log-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile-log-generator
+    depends_on:
+      - log-routing-service
